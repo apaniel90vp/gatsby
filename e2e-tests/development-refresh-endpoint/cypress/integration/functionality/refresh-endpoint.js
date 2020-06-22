@@ -66,8 +66,4 @@ function waitUntilRefreshFinishes() {
       interval: 2000,
     }
   )
-
-  cy.request(`/`).then(response => {
-    expect(response.body).not.to.include(`<title>Restarting...</title>`)
-  })
 }
